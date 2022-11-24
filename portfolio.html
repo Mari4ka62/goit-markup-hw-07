@@ -20,35 +20,39 @@
       <div class="container">
         <!-- Логотип -->
         <a href="#" class="logo"
-          ><span>Web</span> <span class="header-logo">Studio</span></a
+          ><span>Web</span><span class="logo__text--black">Studio</span></a
         >
         <nav>
           <!-- Навігація -->
           <ul class="site-nav list">
-            <li class="item">
-              <a href="./index.html" class="link">Студія</a>
+            <li class="site-nav__item">
+              <a href="./index.html" class="site-nav__link">Студія</a>
             </li>
-            <li class="item">
-              <a href="./portfolio.html" class="link current">Портфоліо</a>
+            <li class="site-nav__item">
+              <a
+                href="./portfolio.html"
+                class="site-nav__link site-nav__link--current"
+                >Портфоліо</a
+              >
             </li>
-            <li class="item">
-              <a href="#" class="link">Контакти</a>
+            <li class="site-nav__item">
+              <a href="#" class="site-nav__link">Контакти</a>
             </li>
           </ul>
         </nav>
         <!-- Аудентифікація -->
         <ul class="auth-nav list">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link mail">
-              <svg class="icon-mail" width="16px" height="12px">
+          <li class="auth-nav__item">
+            <a href="mailto:info@devstudio.com" class="link auth-nav__link">
+              <svg class="auth-nav__icon" width="16px" height="12px">
                 <use href="./images/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link pnone">
-              <svg class="icon-phone" width="10px" height="16px">
+          <li class="auth-nav__item">
+            <a href="tel:+380961111111" class="link auth-nav__link">
+              <svg class="auth-nav__icon" width="10px" height="16px">
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -63,210 +67,220 @@
         <div class="container">
           <h1 class="section-title visually-hidden">Наші роботи</h1>
           <ul class="filter list">
-            <li class="item">
-              <button type="button" class="button">Усі</button>
+            <li class="filter__item">
+              <button type="button" class="button filter__button">Усі</button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Веб-сайти</button>
+            <li class="filter__item">
+              <button type="button" class="button filter__button">
+                Веб-сайти
+              </button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Додатки</button>
+            <li class="filter__item">
+              <button type="button" class="button filter__button">
+                Додатки
+              </button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Дизайн</button>
+            <li class="filter__item">
+              <button type="button" class="button filter__button">
+                Дизайн
+              </button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Маркетинг</button>
+            <li class="filter__item">
+              <button type="button" class="button filter__button">
+                Маркетинг
+              </button>
             </li>
           </ul>
 
           <ul class="work-list list">
-            <li class="item">
-              <a href="" class="link work-link">
-                <div class="work-img">
+            <li class="work-list__item">
+              <a href="" class="link project">
+                <div class="project__img">
                   <img
                     src="./images/portfolioimg1.jpg"
                     alt="Сайт технокряк"
                     width="370"
                   />
-                  <p class="hover-text">
+                  <p class="project__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="content">
-                  <h2 class="title">Технокряк</h2>
-                  <p class="description">Веб-сайт</p>
+                <div class="project__meta">
+                  <h2 class="project__name">Технокряк</h2>
+                  <p class="project__description">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link work-link">
-                <div class="work-img">
+            <li class="work-list__item">
+              <a href="" class="link project">
+                <div class="project__img">
                   <img
                     src="./images/portfolioimg2.jpg"
                     alt="Баскетболісти"
                     width="370"
                   />
-                  <p class="hover-text">
+                  <p class="project__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="content">
-                  <h2 class="title">Постер New Orlean vs Golden Star</h2>
-                  <p class="description">Дизайн</p>
+                <div class="project__meta">
+                  <h2 class="project__name">
+                    Постер New Orlean vs Golden Star
+                  </h2>
+                  <p class="project__description">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link work-link">
-                <div class="work-img">
+            <li class="work-list__item">
+              <a href="" class="link project">
+                <div class="project__img">
                   <img
                     src="./images/portfolioimg3.jpg"
                     alt="Логотип ресторану"
                     width="370"
                   />
-                  <p class="hover-text">
+                  <p class="project__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="content">
-                  <h2 class="title">Ресторан Seafood</h2>
-                  <p class="description">Додаток</p>
+                <div class="project__meta">
+                  <h2 class="project__name">Ресторан Seafood</h2>
+                  <p class="project__description">Додаток</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link work-link">
-                <div class="work-img">
+            <li class="work-list__item">
+              <a href="" class="link project">
+                <div class="project__img">
                   <img
                     src="./images/portfolioimg4.jpg"
                     alt="Навушники"
                     width="370"
                   />
-                  <p class="hover-text">
+                  <p class="project__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="content">
-                  <h2 class="title">Проєкт Prime</h2>
-                  <p class="description">Маркетинг</p>
+                <div class="project__meta">
+                  <h2 class="project__name">Проєкт Prime</h2>
+                  <p class="project__description">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link work-link">
-                <div class="work-img">
+            <li class="work-list__item">
+              <a href="" class="link project">
+                <div class="project__img">
                   <img
                     src="./images/portfolioimg5.jpg"
                     alt="Коробки"
                     width="370"
                   />
-                  <p class="hover-text">
+                  <p class="project__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="content">
-                  <h2 class="title">Проєкт Boxes</h2>
-                  <p class="description">Додаток</p>
+                <div class="project__meta">
+                  <h2 class="project__name">Проєкт Boxes</h2>
+                  <p class="project__description">Додаток</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link work-link">
-                <div class="work-img">
+            <li class="work-list__item">
+              <a href="" class="link project">
+                <div class="project__img">
                   <img
                     src="./images/portfolioimg6.jpg"
                     alt="Монітор із загруженим сайтом"
                     width="370"
                   />
-                  <p class="hover-text">
+                  <p class="project__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="content">
-                  <h2 class="title">Inspiration has no Borders</h2>
-                  <p class="description">Веб-сайт</p>
+                <div class="project__meta">
+                  <h2 class="project__name">Inspiration has no Borders</h2>
+                  <p class="project__description">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link work-link">
-                <div class="work-img">
+            <li class="work-list__item">
+              <a href="" class="link project">
+                <div class="project__img">
                   <img
                     src="./images/portfolioimg7.jpg"
                     alt="Розгорнута книга"
                     width="370"
                   />
-                  <p class="hover-text">
+                  <p class="project__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="content">
-                  <h2 class="title">Видання Limited Edition</h2>
-                  <p class="description">Дизайн</p>
+                <div class="project__meta">
+                  <h2 class="project__name">Видання Limited Edition</h2>
+                  <p class="project__description">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link work-link">
-                <div class="work-img">
+            <li class="work-list__item">
+              <a href="" class="link project">
+                <div class="project__img">
                   <img
                     src="./images/portfolioimg8.jpg"
                     alt="Бірка"
                     width="370"
                   />
-                  <p class="hover-text">
+                  <p class="project__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="content">
-                  <h2 class="title">Проєкт LAB</h2>
-                  <p class="description">Маркетинг</p>
+                <div class="project__meta">
+                  <h2 class="project__name">Проєкт LAB</h2>
+                  <p class="project__description">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link work-link">
-                <div class="work-img">
+            <li class="work-list__item">
+              <a href="" class="link project">
+                <div class="project__img">
                   <img
                     src="./images/portfolioimg9.jpg"
                     alt="Робота за ноутбуком"
                     width="370"
                   />
-                  <p class="hover-text">
+                  <p class="project__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="content">
-                  <h2 class="title">Growing Business</h2>
-                  <p class="description">Додаток</p>
+                <div class="project__meta">
+                  <h2 class="project__name">Growing Business</h2>
+                  <p class="project__description">Додаток</p>
                 </div>
               </a>
             </li>
