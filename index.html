@@ -390,7 +390,7 @@
         <div class="modal">
           <button type="button" class="close-button" data-modal-close>
             <svg
-              class="icon-close"
+              class="close-button__icon"
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -402,33 +402,35 @@
             </svg>
           </button>
           <form class="modal-form">
-            <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+            <p class="modal-form__title">
+              Залиште свої дані, ми вам передзвонимо
+            </p>
             <label class="form-label">
-              <span class="label-name">Ім'я</span>
-              <input type="text" name="user-name" class="form-input" />
-              <svg class="icon" height="18px" width="18px">
+              <span class="form-label__label-name">Ім'я</span>
+              <input type="text" name="user-name" class="form-label__input" />
+              <svg class="form-label__icon" height="18px" width="18px">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </label>
             <label class="form-label">
-              <span class="label-name">Телефон</span>
-              <input type="tel" name="user-phone" class="form-input" />
-              <svg class="icon" height="18px" width="18px">
+              <span class="form-label__label-name">Телефон</span>
+              <input type="tel" name="user-phone" class="form-label__input" />
+              <svg class="form-label__icon" height="18px" width="18px">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </label>
             <label class="form-label">
-              <span class="label-name">Пошта</span>
-              <input type="email" name="user-mail" class="form-input" />
-              <svg class="icon" height="18px" width="18px">
+              <span class="form-label__label-name">Пошта</span>
+              <input type="email" name="user-mail" class="form-label__input" />
+              <svg class="form-label__icon" height="18px" width="18px">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </label>
             <label class="form-label">
-              <span class="label-name">Коментар</span>
+              <span class="form-label__label-name">Коментар</span>
               <textarea
                 name="comment"
-                class="comment-area"
+                class="form-label__comment-area"
                 rows="8"
                 placeholder="Введіть текст"
               ></textarea>
@@ -436,11 +438,11 @@
 
             <label class="checkbox-label">
               <input
-                class="checkbox-modal"
+                class="checkbox-label__input"
                 type="checkbox"
                 name="check-agreement"
               />
-              <span class="icon-check"></span>
+              <span class="checkbox-label__icon"></span>
               <span
                 >Погоджуюся з розсилкою та приймаю
                 <a href="" class="conditions-link link">Умови договору</a>
@@ -456,59 +458,61 @@
     <footer class="footer">
       <div class="container footer-elements">
         <div class="footer-adress">
-          <a href="" class="logo"
+          <a href="" class="logo footer-adress__logo"
             ><span>Web</span><span class="logo__text--white">Studio</span>
           </a>
           <address class="main-adress">
-            <ul class="site-connection list">
-              <li class="item">
+            <ul class="main-adress__list list">
+              <li class="main-adress__item">
                 <a
                   href="https://goo.gl/maps/UttG4NZueuDSJmKQ8"
                   target="_blank"
                   rel="noreferrer noopener"
-                  class="link adress"
+                  class="main-adress__link main-adress__link--white"
                 >
                   м. Київ, пр-т Лесі Українки, 26
                 </a>
               </li>
-              <li class="item">
-                <a href="mailto:info@devstudio.com" class="link"
+              <li class="main-adress__item">
+                <a href="mailto:info@devstudio.com" class="main-adress__link"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="item">
-                <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+              <li class="main-adress__item">
+                <a href="tel:+380961111111" class="main-adress__link"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
         </div>
         <div class="footer-connection">
-          <p class="join">приєднуйтесь</p>
-          <ul class="join-list list">
-            <li class="join-item">
-              <a class="join-link link" href="">
-                <svg class="instagram" width="20px" height="20px">
+          <p class="footer-connection__title">приєднуйтесь</p>
+          <ul class="footer-connection__list list">
+            <li class="footer-connection__item">
+              <a class="footer-connection__link link" href="">
+                <svg class="social-list__icon" width="20px" height="20px">
                   <use href="./images/icons.svg#instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="join-item">
-              <a class="join-link link" href="">
-                <svg class="twitter" width="20px" height="20px">
+            <li class="footer-connection__item">
+              <a class="footer-connection__link link" href="">
+                <svg class="social-list__icon" width="20px" height="20px">
                   <use href="./images/icons.svg#twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="join-item">
-              <a class="join-link link" href="">
-                <svg class="facebook" width="20px" height="20px">
+            <li class="footer-connection__item">
+              <a class="footer-connection__link link" href="">
+                <svg class="social-list__icon" width="20px" height="20px">
                   <use href="./images/icons.svg#facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="join-item">
-              <a class="join-link link" href="">
-                <svg class="linkedin" width="20px" height="20px">
+            <li class="footer-connection__item">
+              <a class="footer-connection__link link" href="">
+                <svg class="social-list__icon" width="20px" height="20px">
                   <use href="./images/icons.svg#linkedin"></use>
                 </svg>
               </a>
@@ -517,11 +521,11 @@
         </div>
         <form class="footer-form">
           <label class="footer-label">
-            <span class="label-text">Підпишіться на розсилку</span>
+            <span class="footer-label__title">Підпишіться на розсилку</span>
             <input
               type="email"
               name="user-mail"
-              class="footer-input"
+              class="footer-label__input"
               placeholder="E-mail"
             />
           </label>

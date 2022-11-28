@@ -470,7 +470,7 @@ img{
     transform: translateY(100%);
     transition: transform 300ms cubic-bezier(.2, 0, .2, 1);
 }
-.project:hover .project__text {
+.project:hover .work-list__text {
     transform: translateY(0);
 }
 .project__meta {
@@ -537,7 +537,7 @@ img{
     border-radius: 4px;
 }
 /* Форма модального вікна */
-.modal-title{
+.modal-form__title{
     margin-bottom: 12px;
 
     font-weight: 700;
@@ -546,7 +546,15 @@ img{
     text-align: center;
     color:var(--title-text-color);
 } 
-.form-label .label-name{
+.form-label {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 10px;
+}
+.form-label__label-name{
     margin-bottom: 4px;
     
     font-weight: 400;
@@ -555,15 +563,8 @@ img{
     letter-spacing: 0.01em;
     color: var(--primary-text-color);
 }
-.form-label{
-    position: relative;
 
-    display: flex;
-    flex-direction: column;
-
-    margin-bottom: 10px;
-}
-.form-label .form-input{
+.form-label__input{
     padding-top: 11px;
     padding-left: 42px;
     padding-bottom: 11px;
@@ -575,14 +576,14 @@ img{
     transition-duration: var(--transition-time);
     transition-timing-function: var(--timing-function);
 }
-.form-label .form-input:focus{
+.form-label__input:focus{
     outline-style: none;
     border-color: #2196F3;
 }
-.form-label:focus-within .icon{
+.form-label:focus-within .form-label__icon{
     fill: #2196F3;
 }
-.form-label .icon{
+.form-label__icon{
     fill: var(--title-text-color);
     
     position: absolute;
@@ -612,7 +613,7 @@ img{
 .modal-button:focus{
     background-color: #188CE8;
 }
-.comment-area{
+.form-label__comment-area{
     margin-bottom: 10px;
     resize: none;
     width: 100%;
@@ -624,11 +625,11 @@ img{
     transition-duration: var(--transition-time);
     transition-timing-function: var(--timing-function);
 }
-.form-label .comment-area:focus {
+.form-label__comment-area:focus {
     outline-style: none;
     border-color: #2196F3;
 }
-.comment-area::placeholder{
+.form-label__comment-area::placeholder{
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16;
@@ -636,7 +637,9 @@ img{
     color: rgba(117, 117, 117, 0.5);
 }
 .checkbox-label{
-    display:block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: var(--main-distance-element);
     
     text-align: center;
@@ -645,16 +648,11 @@ img{
     text-decoration-line: underline;
     color: #2196F3;
 }
-.checkbox-label{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.checkbox-modal{
+.checkbox-label__input{
     appearance: none;
     position: absolute; 
 }
-.icon-check{
+.checkbox-label__icon{
     display: inline-block;
     height: 15px;
     width: 15px;
@@ -663,7 +661,7 @@ img{
     border: 2px solid var(--title-text-color);
     border-radius: 4px;
 }
-.checkbox-modal:checked +.icon-check{
+.checkbox-label__input:checked +.checkbox-label__icon{
     background-color: #2196F3;
     border-color: #2196F3;
     background-image: url(../images/icon-check.svg);
@@ -697,27 +695,30 @@ img{
     color: var(--accent-color);
     border-color: var(--accent-color);
 }
-.icon-close{
+.close-button__icon{
     fill: currentColor;
 }
 /* Footer */
-.footer-elements{
-    display: flex;
-}
-.footer-adress{
-    margin-right: 70px;
-}
 .footer {
     background-color: var(--additional-background);
 
     padding-top: 60px;
     padding-bottom: 60px;
 }
-.footer .logo{
+.footer-elements{
+    display: flex;
+}
+.footer-adress{
+    margin-right: 70px;
+}
+.footer-adress__logo{
     display: block;
     margin-bottom: 20px;
 }
-.site-connection .link {
+.main-adress {
+    font-style: inherit;
+}
+.main-adress__link {
     color: #ffffff60;
     text-decoration: none;
 
@@ -725,24 +726,31 @@ img{
     transition-duration: var(--transition-time);
     transition-timing-function: var(--timing-function);
 }
-.site-connection .adress.link {
+.main-adress__link--white {
     color: var(--main-background-color);
 }
-.site-connection .link:hover,
-.site-connection .link:focus {
+.main-adress__link:hover,
+.main-adress__link:focus {
     color: var(--accent-color);
 }
-.site-connection .item:not(:last-child) {
+.main-adress__item:not(:last-child) {
     margin-bottom: 9px;
 }
-.main-adress {
-    font-style: inherit;
+.footer-connection__title {
+    margin-bottom: 20px;
+    margin-top: 12px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
-.join-list {
+.footer-connection__list {
     display: flex;
     align-items: center;
 }
-.join-list .join-link {
+.footer-connection__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -758,31 +766,21 @@ img{
     transition-duration: var(--transition-time);
     transition-timing-function: var(--timing-function);
 }
-.join-list .join-link:hover,
-.join-list .join-link:focus {
+.footer-connection__link:hover,
+.footer-connection__link:focus {
     background-color: var(--accent-color);
     color: var(--main-background-color);
 }
-.join-list .join-item+.join-item {
+.footer-connection__item+.footer-connection__item {
     margin-left: 10px;
-}
-.footer-connection .join{
-    margin-bottom: 20px;
-    margin-top: 12px;
-
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: #FFFFFF;
 }
 /* Форма підписки */
 .footer-form{
     margin-left: auto;
 }
-.footer-form .label-text{
+.footer-label__title{
     display: block;
-    margin-top: 23px;
+    margin-top: 12px;
     margin-bottom: 20px;
 
     font-weight: 700;
@@ -791,7 +789,7 @@ img{
     text-transform: uppercase;
     color:var(--main-background-color);
 }
-.footer-input{
+.footer-label__input{
     height: 50px;
     width: 358px;
     margin-right: 12px;
@@ -802,7 +800,7 @@ img{
     color: var(--main-background-color);
 
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     background-color: transparent;
 
@@ -810,11 +808,11 @@ img{
     transition-duration: var(--transition-time);
     transition-timing-function: var(--timing-function);
 }
-.footer-input:focus{
+.footer-label__input:focus{
     outline-style: none;
     border-color: var(--accent-color);
 }
-.footer-input::placeholder{
+.footer-label__input::placeholder{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -823,9 +821,13 @@ img{
 /* Кнопка підписки */
 .sign-button{
     display: inline-flex;
+    justify-content: center;
     align-items: center;
-    padding:10px 28px;
     
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    max-height: 50px;
     min-width: 200px;
     border-radius: 4px;
     border-color: transparent;
